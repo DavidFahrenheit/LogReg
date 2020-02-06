@@ -11,12 +11,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import train_test_split
 from sklearn import metrics 
 from sklearn.metrics import classification_report
-%matplotlib inline
+#matplotlib inline
 rcParams['figure.figsize'] = 10, 8
 sb.set_style('whitegrid')
 
 
-fpath = 'C:\Users\robert.everitt\Desktop\xG.csv'
+fpath = r'DxG.txt'
 titanic = pd.read_csv(fpath)
 
 
