@@ -39,4 +39,6 @@ print(confusion_matrix)
 #print(type(xG_Data))
 #print(xG_Data.head)
 
+Mtheta = sigmoid( dot([val1, val2], logmodel.coef_) + logmodel.intercept_ )
+
 #print(Y_train.head)
