@@ -19,7 +19,7 @@ Y = xG_Data.iloc[:,-1]
 
 from sklearn.model_selection import train_test_split
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state = 1)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 
 
 from sklearn.linear_model import LogisticRegression
@@ -39,6 +39,8 @@ print(confusion_matrix)
 #print(type(xG_Data))
 #print(xG_Data.head)
 
-Mtheta = sigmoid( dot([val1, val2], logmodel.coef_) + logmodel.intercept_ )
-
+Mtheta = logmodel.coef_ 
+Mintercept = logmodel.intercept_
+print(Mtheta)
+print(Mintercept)
 #print(Y_train.head)
