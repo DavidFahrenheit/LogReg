@@ -28,7 +28,7 @@ logmodel = LogisticRegression(max_iter = 1000)
 
 logmodel.fit(X_train, Y_train)
 
-y_pred = logmodel.predict(X_test)
+y_pred = logmodel.predict(X_test)	
 
 print('Accuracy: %d', (logmodel.score(X_test, Y_test)))
 
@@ -39,8 +39,21 @@ print(confusion_matrix)
 #print(type(xG_Data))
 #print(xG_Data.head)
 
+def sigmoid(x):
+    return (1 / (1 + np.exp(-x)))
+
 Mtheta = logmodel.coef_ 
 Mintercept = logmodel.intercept_
 print(Mtheta)
 print(Mintercept)
-#print(Y_train.head)
+
+X_trainnp = X_train.to_numpy()
+
+
+print(type(X_trainnp))
+print(X_trainnp[6:7,:].shape)
+
+Mtheta_T = Mtheta.transpose()
+
+xG_test = sigmoid(Mintercept + np.matmul(X_trainnp[16], Mtheta_T))
+print(xG_test)
