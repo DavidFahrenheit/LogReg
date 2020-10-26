@@ -87,7 +87,7 @@ X_train = np.concatenate((X_sc,Xtanh), axis =1)
 #X_train = X_sc
 
 print('X_train shape = ', X_train.shape)
-
+print('Ynp =', Ynp.shape)
 linmodel = LinearRegression()
 
 linmodel.fit(X_train, Ynp)
